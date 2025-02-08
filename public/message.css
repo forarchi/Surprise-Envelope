@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b1522;
+    flex-direction: column; /* Align the heart above the text */
+}
+
+.heart-main {
+    height: 70px;
+    width: 70px;
+    background-color: #f20044;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044;
+    animation: heartanime 2s infinite ease-in;
+    margin-bottom: 20px; /* Space between heart and text */
+    margin-top: 300px;
+}
+
+@keyframes heartanime {
+    0%, 100% {
+        box-shadow: 0 0 20px #f20044, 0 0 40px #f20044, 0 0 60px #f20044;
+    }
+    25% {
+        box-shadow: 0 0 40px #f20044, 0 0 80px #f20044, 0 0 100px #f20044;
+    }
+    50% {
+        box-shadow: 0 0 60px #f20044, 0 0 120px #f20044, 0 0 150px #f20044;
+    }
+    75% {
+        box-shadow: 0 0 40px #f20044, 0 0 80px #f20044, 0 0 100px #f20044;
+    }
+}
+
+.heart-main::before {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: #f20044;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: 10px -10px 90px #f20044;
+}
+
+.heart-main::after {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: #f20044;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.text {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOut 6s forwards; /* Increased duration for smooth fading in and out */
+    margin: 10px 0;
+}
+
+/* FadeIn and FadeOut animation for the text */
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Staggered fadeIn and fadeOut effect for each line */
+.text:nth-child(1) {
+    animation-delay: 0s;
+}
+.text:nth-child(2) {
+    animation-delay: 6s;
+}
+.text:nth-child(3) {
+    animation-delay: 12s;
+}
+.text:nth-child(4) {
+    animation-delay: 18s;
+}
+.text:nth-child(5) {
+    animation-delay: 24s;
+}
+.text:nth-child(6) {
+    animation-delay: 30s;
+}
+.text:nth-child(7) {
+    animation-delay: 36s;
+}
+.text:nth-child(8) {
+    animation-delay: 42s;
+}
+.text:nth-child(9) {
+    animation-delay: 48s;
+}
